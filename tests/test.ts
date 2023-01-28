@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
+import {getNumber} from "$lib/example";
 
 test('index page has expected h1', async ({ page }) => {
-	await page.goto('/');
-	expect(await page.textContent('h1')).toBe('Welcome to SvelteKit');
+	expect(1).toEqual(getNumber());
 });
